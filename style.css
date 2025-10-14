@@ -22,12 +22,14 @@
 
 .menu a:hover{
     color: rgb(16, 166, 211);
-    text-decoration: solid;
+    text-decoration: none;
+    transition: color 0.3s ease;
 }
 
 
 #join {
-    background-color: aqua;
+    /* background-color: aqua; */
+    background-image: linear-gradient(to right, aqua, rgb(255, 103, 255));
     color: black;
     border: none;
     padding: 8px 15px;
@@ -97,8 +99,29 @@
     align-items: center;
     padding: 10px 50px;
     margin-left: 30px ;
+
 }
 
+.icon-menu2{
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    padding: 10px 50px;
+    margin-left: 30px ;
+    color: grey;
+}
+
+.icon-menu2 p {
+  margin: 5px;
+}
+
+.w-color{
+    color: white;
+}
+
+.g-color{
+    color: grey;
+}
 
 .icon-menu img:hover {
     transform: scale(1.1); 
@@ -122,4 +145,30 @@
     margin: 20px auto;
     background-color:aqua;
     opacity: 20%;
+}
+
+.footer-end {
+  display: flex;
+  justify-content: flex-end;  /* pushes content to the right */
+  padding-right: 50px;        /* control how far right it sits */
+}
+
+.footer-end ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  color: grey;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+}
+
+.footer-end2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 10px 50px;
+  margin-left: 30px;
 }

@@ -1,85 +1,287 @@
+/*
+Global Reset
+*/
 *{
-    background-color: rgb(0, 0, 0);
-    margin: 0;
-    padding: 0;
+    /* Sets black background */
+    background-color: rgb(0, 0, 0); 
+    /* Removes default outer spacing */
+    margin: 0; 
+    /* Removes default inner spacing */
+    padding: 0; 
+    /* Sets default font */
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 
 }
 
+/*
+Header and Navigation Bar
+*/
 header {
-    position: sticky;
+    /* Makes the header stick to the top */
+    position: sticky; 
     top: 0;
+    /* Semi-transparent dark background */
     background-color: rgba(9, 21, 27, 0.8); 
-    backdrop-filter: blur(2px);
-    z-index: 1000;
+    /* Applies a blur effect */
+    backdrop-filter: blur(2px); 
+    /* Ensures header stays on top */
+    z-index: 1000; 
 }
 
+.navbar {
+    /* Layout for the navbar container */
+    display: flex; 
+    /* Space between logo and menu */
+    justify-content: space-between; 
+    align-items: center; 
+    padding: 10px 50px;
+}
 
+/* Navbar Link Container */
+.nav-links {
+    /* Aligns list and button in a row */
+    display: flex; 
+    /* Vertically centers items */
+    align-items: center; 
+    /* Space between list and button */
+    gap: 15px; 
+}
 
-.menu a {
-    color: #d0d0d1;
-    padding: 10px 15px;
+/* Navbar Links List (Only used on index.html) */
+.nav-links ul {
+    list-style: none; 
+    /* Makes links horizontal */
+    display: flex; 
+    padding: 0;
+    margin: 0;
+    /* Removes space between items */
+    gap: 0; 
+}
+
+.nav-links li {
+    /* Removes default list item padding */
+    padding: 0; 
+}
+
+.nav-links ul a,
+.nav-links > a { /* Target both list links and standalone links (Tournaments page) */
+    /* Styles for navigation links */
+    color: #d0d0d1; 
+    /* Adds clickable area */
+    padding: 10px 15px; 
     font-weight: bold;
     text-align: center;
     text-decoration: solid;
+    /* Makes full padding area clickable */
+    display: block; 
 }
 
-.m-slogan{
-    display: flix;
-    color: white;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    font-weight: normal;
-    font-size: 40px;
-    background: linear-gradient(to left, aqua, rgb(255, 103, 255));
-    background-size: 200%;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    margin-top: 10%;
-    margin-bottom: 10px;
-}
-
-.s-slogan{
-    color: white;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 50px;
-    
-}
-
-
-.menu a:hover{
-    color: rgb(16, 166, 211);
+.nav-links a:hover { 
+    /* Hover color change */
+    color: rgb(16, 166, 211); 
     text-decoration: none;
-    transition: color 0.3s ease;
+    /* Smooth transition */
+    transition: color 0.3s ease; 
 }
 
 
 #join {
-    background-image: linear-gradient(to right, aqua, rgb(255, 103, 255));
+    background-image: linear-gradient(to right, aqua, rgb(255, 103, 255)); 
     color: black;
     border: none;
     padding: 8px 15px;
     border-radius: 10px;
     cursor: pointer;
     font-weight: bold;
+    /* Glow effect */
+    box-shadow: 0 0 10px aqua; 
 }
 
-.footer-menu {
-    max-width: 1200px;
-    display: inline-flex;
+/*
+Main Slogan/Hero Content
+*/
+.hero-title{
+    /* Main heading style, used for large slogans */
+    display: flix; /* Original typo: should be 'flex' */
+    color: white;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-weight: normal;
+    font-size: 40px;
+    /* Gradient text effect */
+    background: linear-gradient(to left, aqua, rgb(255, 103, 255));
+    background-size: 200%;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 10px;
+}
+
+.hero-subtitle{
+    /* Sub-slogan text style */
+    color: white;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* Utility Classes */
+.u-margin-top-lg{
+    /* Large top margin utility */
+    margin-top: 10%;
+}
+
+.u-margin-bottom-lg{
+    /* Large bottom margin utility */
+    margin-bottom: 10%;
+}
+
+.u-text-white{
+    /* White text utility */
+    color: white;
+}
+
+.u-text-grey{
+    /* Grey text utility */
+    color: grey;
+}
+
+div .grad-color{
+    /* Gradient text utility (Unused in final HTML, retained for original style consistency) */
+    background: linear-gradient(to left, aqua, rgb(255, 103, 255));
+    -webkit-text-fill-color: transparent;
+}
+
+
+/*
+Tournament Card Styles
+*/
+.tournament-grid{
+    /* Grid layout for multiple cards */
+    display:grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.tournament-card {
+    /* Tournament card container */
+    background-color: #161623;
+    color: #ffffff;
+    border-radius: 16px;
+    overflow: hidden;
+    width: 300px;
+    /* Hover transition */
+    transition: transform 0.3s ease; 
+    margin: 50px auto auto auto;
+    border: 1px solid #0a2935;
+}
+
+.tournament-card:hover {
+    /* Card zoom on hover */
+    transform: scale(1.1);
+}
+
+.card-image {
+    /* Image wrapper */
+    position: relative;
+}
+
+.card-image img {
+    /* Image sizing */
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.card-prize-tag {
+    /* Prize tag overlay */
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-image: linear-gradient(to right, #00d0ff, #b100ff);
+    color: #fff;
+    padding: 6px 14px;
+    border-radius: 30px;
+    font-weight: bold;
+    box-shadow: 0 0 10px #00d0ff;
+}
+
+
+.card-content {
+    /* Inner card padding */
+    padding: 18px 20px;
+}
+
+.card-content h3 {
+    /* Card title style */
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+}
+
+.card-game-link {
+    /* Game link style */
+    color: #00bfff;
+    text-decoration: none;
+    font-size: 0.95rem;
+}
+
+.card-meta-data {
+    /* Tournament details container */
+    display: flex;
+    flex-direction: column;
     justify-content: space-between;
+    font-size: 0.9rem;
+    opacity: 0.8;
+    margin: 10px 0 18px;
+}
+
+.card-meta-data div {
+    /* Detail alignment */
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+
+.join {
+    /* Card join button */
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    color: #fff;
+    background-image: linear-gradient(to right, #00d0ff, #b100ff);
+}
+
+
+/*
+Footer Section
+*/
+.footer-menu {
+    /* Container for footer link columns */
+    max-width: 1200px;
+    display: inline-flex; 
+    /* Space between columns */
+    justify-content: space-between; 
     gap: 60px;
     color: white;
 }
-.footer-e {
+
+.footer-description {
+    /* Footer introductory text */
+    max-width: 450px; 
+    width: 80%;
+    margin-left: 70px ;
+    padding: 15px 10px;
+    line-height: 1.6;
+    text-align: left;
+    color: grey;
+}
+
+.footer-heading {
+    /* Footer column headings */
     color: white;
     font-size: medium;
     margin-top: 0;
@@ -88,16 +290,19 @@ header {
 }
 
 .footer-menu ul {
-    list-style-type: none;
+    /* Removes list bullets */
+    list-style-type: none; 
     padding-left: 0;
     margin: 0;
 }
 
 .footer-menu li {
+    /* Item spacing */
     margin-bottom: 8px;
 }
 
 .footer-menu a {
+    /* Footer link styling */
     color: grey;
     text-decoration: none;
     padding: 0;
@@ -105,66 +310,53 @@ header {
 }
 
 .footer-menu a:hover {
+    /* Footer link hover effect */
     color: white;
     text-decoration: solid;
 }
 
-.side-text {
-  max-width: 450px; 
-  width: 80%;  
-  margin-left: 70px ;
-  padding: 15px 10px;
-  line-height: 1.6;
-  text-align: left;
-  color: grey;
-}
-
-
-.icon-box{
+/* Icon Buttons and Social Links */
+.icon-button{
+    /* Icon button styling */
     border: 1px solid #01bbe6;
     padding: 10px;
     border-radius: 10px;
 }
 
-
-.icon-menu{
+.social-links{
+    /* Container for social media icons/contact items */
     display: flex;
     gap: 30px;
     align-items: center;
     padding: 10px 50px;
     margin-left: 30px ;
-
 }
 
-.icon-menu2{
-    display: flex;
-    gap: 30px;
-    align-items: center;
-    padding: 10px 50px;
-    margin-left: 30px ;
-    color: grey;
-}
-
-.icon-menu2 p {
-  margin: 5px;
-}
-
-.w-color{
-    color: white;
-}
-
-.g-color{
-    color: grey;
-}
-
-.icon-menu img:hover {
+.icon-button:hover {
+    /* Icon hover scale effect */
     transform: scale(1.1); 
     cursor: pointer;
 }
 
+.contact-item{
+    /* Container for a single piece of contact information (Email, Phone, Location) */
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    padding: 10px 50px;
+    margin-left: 30px ;
+    color: grey;
+}
 
-.divider-line{
-    
+.contact-item p {
+    /* Text spacing inside contact info */
+    margin: 5px;
+}
+
+
+/* Dividers */
+.divider-gradient{
+    /* Main gradient divider */
     border: none;
     height: 2px;
     width: 90%;
@@ -172,7 +364,8 @@ header {
     background-image: linear-gradient(to right, black, aqua, black);
 }
 
-.divider-line2{
+.divider-subtle{
+    /* Subtle footer divider */
     border: none;
     height: 2px;
     width: 90%;
@@ -181,112 +374,33 @@ header {
     opacity: 20%;
 }
 
-.footer-end {
-  display: flex;
-  justify-content: flex-end;
-  padding-right: 50px;
+
+/* Footer Bottom Bar */
+.footer-bottom-bar {
+    /* Container for copyright and policy links */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10px 50px;
+    margin-left: 30px;
 }
 
-.footer-end ul {
-  list-style: none;
-  display: flex;
-  gap: 20px;
-  color: grey;
-  margin: 0;
-  padding: 0;
-  cursor: pointer;
+.footer-policy-links {
+    /* Container for utility links (Privacy, Terms) */
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 50px;
 }
 
-.footer-end2 {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 10px 50px;
-  margin-left: 30px;
-}
-
-
-.card {
-  background-color: #161623;
-  color: #ffffff;
-  border-radius: 16px;
-  overflow: hidden;
-  width: 300px;
-  transition: transform 0.3s ease;
-  margin: 50px auto auto auto;
-}
-
-.a-card{
-    display:grid;
-    grid-template-columns: repeat(3, 1fr);
+.footer-policy-links ul {
+    /* Horizontal utility links */
+    list-style: none;
+    display: flex;
     gap: 20px;
-}
-
-.card:hover {
-  transform: scale(1.1);
-}
-
-.card-image {
-  position: relative;
-}
-
-.card-image img {
-  width: 100%;
-  height: 180px;
-  object-fit: cover;
-}
-
-.prize {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  background-image: linear-gradient(to right, #00d0ff, #b100ff);
-  color: #fff;
-  padding: 6px 14px;
-  border-radius: 30px;
-  font-weight: bold;
-}
-
-.card-content {
-  padding: 18px 20px;
-}
-
-.card-content h3 {
-  font-size: 1.1rem;
-  margin-bottom: 5px;
-}
-
-.game {
-  color: #00bfff;
-  text-decoration: none;
-  font-size: 0.95rem;
-}
-
-.info {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  font-size: 0.9rem;
-  opacity: 0.8;
-  margin: 10px 0 18px;
-}
-
-.info div {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-}
-
-
-.join {
-  width: 100%;
-  padding: 10px;
-  border: none;
-  border-radius: 10px;
-  font-weight: bold;
-  cursor: pointer;
-  color: #fff;
-  background-image: linear-gradient(to right, #00d0ff, #b100ff);
+    color: grey;
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
 }

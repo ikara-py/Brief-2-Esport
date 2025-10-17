@@ -10,20 +10,22 @@
 <body>
     <header>
         <nav class="navbar">
-            <div class="nav-logo"><a>logo</a></div>
+            <div class="nav-logo"><a href="index.html">E-Sport Nexus</a></div>
 
             <div class="nav-links">
-                <a href="index.html">Home</a>
-                <a href="Tournaments.html">Tournaments</a>
-                <a href="#">Teams</a>
-                <a href="#">Games</a>
-                <a href="#">Blog</a>
-                <a href="#">Contact</a>
-                <button id="join">Join Tournament</button>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="Tournaments.html">Tournaments</a></li>
+                    <li><a href="teams.html">Teams</a></li>
+                    <li><a href="games.html">Games</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <button class="join-btn"><a href="login.html">Join Tournament</a></button>
             </div>
         </nav>
     </header>
-
+    
     <h4 class="hero-title">Upcoming Tournaments</h4>
     <p class="hero-subtitle">Join the most competitive tournaments and showcase your skills against the best players worldwide.</p>
     
@@ -101,7 +103,7 @@
             </div>
             <div class="card-content">
                 <h3>Chicken Championship 2025</h3>
-                <a href="https://www.ea.com/games/apex-legends/apex-legends" class="card-game-link">Apex Legends</a>
+                <a href="https://www.ea.cgames.htmlm/games/apex-legends/apex-legends" class="card-game-link">Apex Legends</a>
                 <div class="card-meta-data">
                     <div>
                         <img src="assets/variant=11.png" alt="calendar icon">
@@ -116,6 +118,106 @@
             </div>
         </div> 
     </div>
+    <div class="tournament-grid">
+        <div class="tournament-card">
+            <div class="card-image">
+                <span class="card-prize-tag">$500,000</span>
+                <img src="assets/Dota_2_Steam_artwork.webp" alt="Valorant Game Art">
+            </div>
+            <div class="card-content">
+                <h3>The International 2025</h3>
+                <a href="https://playvalorant.com/en-gb/" class="card-game-link">Dota 2</a>
+                <div class="card-meta-data">
+                    <div>
+                        <img src="assets/variant=11.png" alt="calendar icon">
+                        <p>Sep 20, 2025</p>
+                    </div>
+                    <div>
+                        <img src="assets/variant=10.png" alt="team icon">
+                        <p>150 Teams</p>
+                    </div>
+                </div>
+                <a href="#"><button class="join">Join Now</button></a>
+            </div>
+        </div>
+            
+        <div class="tournament-card">
+            <div class="card-image">
+                <span class="card-prize-tag">$250,000</span>
+                <img src="assets/CrossFire.webp" alt="League of Legends Game Art">
+            </div>
+            <div class="card-content">
+                <h3>Neon League Finals</h3>
+                <a href="https://www.leagueoflegends.com/" class="card-game-link">League of Legends</a>
+                <div class="card-meta-data">
+                    <div>
+                        <img src="assets/variant=11.png" alt="calendar icon">
+                        <p>Jan 15, 2026</p>
+                    </div>
+                    <div>
+                        <img src="assets/variant=10.png" alt="team icon">
+                        <p>64 Teams</p>
+                    </div>
+                </div>
+                <a href="#"><button class="join">Join Now</button></a>
+            </div>
+        </div> 
+
+        <div class="tournament-card">
+            <div class="card-image">
+                <span class="card-prize-tag">$750,000</span>
+                <img src="assets/Rainbow Six Siege.webp" alt="CS2 Game Art">
+            </div>
+            <div class="card-content">
+                <h3>Six Invitational 2025</h3>
+                <a href="https://www.ubisoft.com/en-gb/game/rainbow-six/siege" class="card-game-link">Rainbow Six Siege</a>
+                <div class="card-meta-data">
+                    <div>
+                        <img src="assets/variant=11.png" alt="calendar icon">
+                        <p>Mai 5, 2026</p>
+                    </div>
+                    <div>
+                        <img src="assets/variant=10.png" alt="team icon">
+                        <p>206 Teams</p>
+                    </div>
+                </div>
+                <a href="#"><button class="join">Join Now</button></a>
+            </div>
+        </div> 
+
+        <div class="tournament-card">
+            <div class="card-image">
+                <span class="card-prize-tag">$190,500</span>
+                <img src="assets/Fatal Fury 2.webp" alt="Apex Legends Game Art">
+            </div>
+            <div class="card-content">
+                <h3>Chicken Championship 2025</h3>
+                <a href="https://www.snk-corp.co.jp/us/games/fatalfury-cotw/" class="card-game-link">Fatal Fury: City of the Wolves</a>
+                <div class="card-meta-data">
+                    <div>
+                        <img src="assets/variant=11.png" alt="calendar icon">
+                        <p>Fev 10, 2026</p>
+                    </div>
+                    <div>
+                        <img src="assets/variant=10.png" alt="team icon">
+                        <p>198 Teams</p>
+                    </div>
+                </div>
+                <a href="#"><button class="join">Join Now</button></a>
+            </div>
+        </div> 
+    </div>
+
+
+    <div class="home-box u-margin-bottom-lg u-margin-top-lg">
+        <div class="box1 home-box">
+            <img src="assets/variant=13.svg" alt="icon">
+            <h4 class="box-element">Ready to Join the Arena?</h4>
+            <p class="box-element u-text-grey">Create your account today and start competing in tournaments, joining elite teams, and climbing the leaderboard.</p>
+            <button class="join btn-style "><a href="signup.html">Sign Up Now</a></button>
+        </div>
+    </div>
+
 
     <footer>
         <hr class="divider-gradient">
@@ -134,8 +236,8 @@
                 <h4 class="footer-heading">Platform</h4>
                 <ul>
                     <li><a href="Tournaments.html">Tournament</a></li>
-                    <li><a href="#">Teams</a></li>
-                    <li><a href="#">Games</a></li>
+                    <li><a href="teams.html">Teams</a></li>
+                    <li><a href="games.html">Games</a></li>
                     <li><a href="#">Ranking</a></li>
                     <li><a href="#">Live Stream</a></li>
                 </ul>

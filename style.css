@@ -691,3 +691,9 @@ h4.box-element{
 .submit-login-btn:hover {
     transform: scale(1.1);
 }
+
+.inside-align{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}

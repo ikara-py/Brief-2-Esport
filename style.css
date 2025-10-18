@@ -628,3 +628,66 @@ h4.box-element{
     gap: 5px;
 }
 
+.box3 {
+    width: 400px;
+    padding: 40px;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.2), 0 0 30px rgba(255, 103, 255, 0.1);
+    border: 1px solid rgba(0, 255, 255, 0.4);
+    color: white;
+}
+
+.box3 h1 {
+    margin: 0 0 30px 0;
+    background: linear-gradient(to left, aqua, rgb(255, 103, 255));
+    background-size: 200%;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.login-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.login-container label {
+    color: #d0d0d1;
+    margin-bottom: 5px;
+}
+
+.input-login{
+    display: block;
+    width: 100%;
+}
+
+.input-login input {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #00d0ff;
+    background-color: rgba(128, 0, 128, 0.338);
+    border-radius: 10px;
+    color: white;
+}
+
+
+.input-login input::placeholder {
+    color: #9c9c9c;
+}
+
+.submit-login-btn {
+    background-image: linear-gradient(to right, #00d0ff, #b100ff);
+    color: white;
+    padding: 15px;
+    border-radius: 10px;
+    border: none;
+    font-weight: bold;
+    margin-top: 15px;
+    width: 100%;
+    box-shadow: 0 0 10px #00d0ff;
+}
+
+.submit-login-btn:hover {
+    transform: scale(1.1);
+}
